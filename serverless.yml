@@ -6,15 +6,14 @@ provider:
 
 layers:
   modules:
-    path: layers
+    path: layers/modules
 
 functions:
   generateQrcode:
     handler: functions/generate-qr-code.handle
     layers:
-      - {Ref: ModulesLambdaLayer}
+      - { Ref: ModulesLambdaLayer }
     events:
       - http:
           path: /qrcodes/generate
           method: get
-

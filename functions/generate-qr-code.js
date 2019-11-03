@@ -1,4 +1,4 @@
-const QRCode = require('qrcode')
+const QRCode = require('qrcode');
 
 module.exports.handle = async event => {
   return {
@@ -8,7 +8,7 @@ module.exports.handle = async event => {
         message: await QRCode.toDataURL('www.google.com'),
       },
       null,
-      2
+      2,
     ),
   };
 };
