@@ -1,0 +1,11 @@
+{
+  "name": "qrcoded-lambda",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:FictionalDevelopers/qrcoded-lambda.git",
+  "author": "Eugene Annienkov <eugene.annienkov@onereach.com>",
+  "license": "MIT",
+  "scripts": {
+    "deploy": "serverless deploy --aws-profile qrcoded -v"
+  }
+}

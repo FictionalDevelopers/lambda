@@ -4,11 +4,17 @@ provider:
   name: aws
   runtime: nodejs10.x
 
+layers:
+  modules:
+    path: layers
+
 functions:
-  hello:
-    handler: handler.hello
+  generateQrcode:
+    handler: functions/generate-qr-code.handle
+    layers:
+      - {Ref: ModulesLambdaLayer}
     events:
       - http:
-          path: /
+          path: /qrcodes/generate
           method: get
 
