@@ -9,11 +9,17 @@ module.exports.handle = async event => {
   } = data;
   return {
     statusCode: 200,
+    headers: {
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'OPTIONS,POST,GET',
+    },
     body: JSON.stringify(
       {
         success: true,
         url: await QRCode.toDataURL(`WIFI:T:${protocol};S:${name};P:${password};;`),
         data,
+        event
       },
       null,
       2,

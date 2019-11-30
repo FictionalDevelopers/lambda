@@ -17,3 +17,6 @@ functions:
       - http:
           path: /qrcodes/generate
           method: post
+resources:
+  # API Gateway Errors
+  - ${file(resources/api-gateway-errors.yml)}
