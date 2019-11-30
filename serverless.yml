@@ -16,4 +16,4 @@ functions:
     events:
       - http:
           path: /qrcodes/generate
-          method: get
+          method: post
