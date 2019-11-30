@@ -2,7 +2,7 @@ service: qrcoded-lambda
 
 provider:
   name: aws
-  runtime: nodejs10.x
+  runtime: nodejs12.x
 
 layers:
   modules:
